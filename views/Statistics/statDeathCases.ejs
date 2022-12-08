@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/Panel.css">
+    <script src="/js/Panel.js" defer></script>
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 70%;
+        border: 1px solid #263238;
+        margin: 6rem auto 1rem auto;
+    }
+    th{
+        font-size: larger;
+    }
+    th,
+    td {
+        text-align: center;
+        padding: 16px;
+    }
+
+    tr:nth-child(odd) {
+        background-color: lightgray;
+    }
+
+    .btn {
+        border: 2px solid #263238;
+        color: #263238;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 5px;
+        margin: 25px 15px;
+    }
+
+    th, .btn:hover {
+        background-color: #263238;
+        color: #fff;
+    }
+</style>
+<body>
+    <div class="upload-slider">
+        <%- include("../partials/Panel") %>
+            <section class="home-section">
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
+                    <span class="text">Statistics | Death Cases </span>
+                </div>
+                <div class="main">
+                    <table border="1"> 
+                        <thead>
+                            <tr>
+                                <th colspan="2">Death Cases Statistics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Total Death Cases</td>
+                                <td><%= total %></td>
+                            </tr>
+                            <tr>
+                                <td>Median</td>
+                                <td><%= median %></td>
+                            </tr>
+                            <tr>
+                                <td>IQR</td>
+                                <td><%= iqr %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+</body>
+
+</html>

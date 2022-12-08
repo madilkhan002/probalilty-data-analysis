@@ -9,7 +9,7 @@ for (a in cases[1])
 }
 options(scipen=10000)
 
-jpeg(file="D:/web/Prob Project/public/images/confirmCasesBoxPlot.jpeg",
-     width=600, height=350)
+jpeg(file="E:/Prob Project/public/images/confirmCasesBoxPlot.jpeg",
+     width=750, height=350)
 boxplot(confirm_cases, col="green")
 dev.off()

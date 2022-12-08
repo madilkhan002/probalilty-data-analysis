@@ -10,7 +10,7 @@ for (a in cases[1])
 
 options(scipen=10000)
 
-jpeg(file="D:/web/Prob Project/public/images/recoveredCasesHistogram.jpeg",
+jpeg(file="E:/Prob Project/public/images/recoveredCasesHistogram.jpeg",
     width=600, height=350)
 hist(recover_cases, col="green")
 dev.off()
