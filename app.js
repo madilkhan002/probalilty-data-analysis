@@ -65,6 +65,19 @@ app.get('/statisticsrecoveredcases',(req,res)=>{
     res.render('Statistics/statRecoveredCases',{median : result[1],iqr : result[2],total : result[3]})
 })
 
+//poisson distribution
+app.get('/poissondist',(req,res)=>{
+    const result = R.executeRScript('./scripts/poisson.R')
+    res.render('poisson',{d : result[1],c : result[2],p : result[3],adr : result[4],atleast : result[5],exact : result[6]});
+})
+
+//linear Regression
+
+app.get('/linearregression',(req,res)=>{
+    R.executeRScript('./scripts/linearReg.R')
+    res.render('linearReg')
+})
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT,err => console.log('Listeining 8000 Port'))
