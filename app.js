@@ -71,12 +71,6 @@ app.get('/poissondist',(req,res)=>{
     res.render('poisson',{d : result[1],c : result[2],p : result[3],adr : result[4],atleast : result[5],exact : result[6]});
 })
 
-//linear Regression
-
-app.get('/linearregression',(req,res)=>{
-    R.executeRScript('./scripts/linearReg.R')
-    res.render('linearReg')
-})
 
 const PORT = process.env.PORT || 8000;
 
